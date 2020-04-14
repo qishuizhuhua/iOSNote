@@ -30,6 +30,8 @@ struct NSObject_IMPL {
 class_getInstanceSize([NSObject class])  //8byte
 //获得obj指针所指向内存的大小
 malloc_size((__bridge const void *)obj); //16byte
+
+//这里有个小问题sizeof()这里只是获取类型大小，跟上面的不是一个东西
 ```
 
 OC源码地址：https://opensource.apple.com/tarballs/
@@ -104,7 +106,7 @@ struct Student_IMPL {
 这里有内存对齐概念，即不足16字节补齐，所以只会有8的倍数
 ```
 
-
+以上都是实例对象本质。
 
 
 
